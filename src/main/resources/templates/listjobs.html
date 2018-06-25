@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Jobs</title>
+</head>
+<body>
+    <div th:each="eachJob:${alljobs}">
+        <a th:href="@{/show/{id}(id=${eachJob.id})}"><p th:text="${eachJob.position}">Random Text</p></a>
+    </div>
+</body>
+</html>
